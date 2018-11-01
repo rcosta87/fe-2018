@@ -1,4 +1,10 @@
 [{
+        "gentilico": "",
+        "nome_pais": "Selecionar um país",
+        "nome_pais_int": "",
+        "sigla": "0"
+    },
+    {
         "gentilico": "afegãne",
         "nome_pais": "Afeganistão",
         "nome_pais_int": "Afghanistan",

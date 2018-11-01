@@ -107,6 +107,7 @@
             <div class="space"></div>
          </form>
       </div>
+      <nav-forms titulo="Nomes" rota="/nomes"></nav-forms>
    </formulario-wrap>
 </template>
 

@@ -47,6 +47,8 @@
             </div>
          </form>
       </div>
+
+      <nav-forms titulo="Dados Demográficos" rota="/dados-demograficos"></nav-forms>
    </formulario-wrap>
 </template>
 
@@ -63,4 +65,6 @@ export default {
   }
 };
 </script>
+
+
 

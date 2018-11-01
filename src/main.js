@@ -5,6 +5,8 @@ import App from './App'
 import router from './router'
 import Formulario from './components/formularios.vue'
 Vue.component('formulario-wrap', Formulario)
+import Navigation from './components/navigation.vue'
+Vue.component('nav-forms', Navigation)
 
 
 /* eslint-disable no-new */

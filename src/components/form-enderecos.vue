@@ -86,6 +86,7 @@
                <div class="col-xs-12" v-show="nacionalidade === 'brasileiro'">
                   <label for="">Selecione um estado:</label>
                   <select id="estados" v-model="selected">
+                     <option value="first" disabled selected>Selecione um Estado</option>
                      <option v-for="item in estados" v-bind:value="item.cidades" v-bind:key="item.sliga"> {{ item.nome }} </option>
                   </select>
                   <label for="">Municípios:</label>
@@ -126,6 +127,7 @@
             </div>
          </form>
       </div>
+      <nav-forms titulo="Comunicações Eletrônicas" rota="/comunicacoes"></nav-forms>
    </formulario-wrap>
 </template>
 

@@ -42,6 +42,7 @@
          </form>
          <div class="space"></div>
       </div>
+      <nav-forms titulo="Vínculos" rota="/vinculos"></nav-forms>
    </formulario-wrap>
 </template>
 

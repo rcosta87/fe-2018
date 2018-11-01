@@ -10,7 +10,7 @@
                <div class="sidebar-container">
                <section id="intro-user">
                   <div class="thumb">
-                     <img src="@/assets/photo-1524593689594-aae2f26b75ab.jpg" alt="">
+                     <img src="http://www.parkingsite.com.br/fe-2018/static/photo-1524593689594-aae2f26b75ab.jpg" alt="">
                   </div>
                   <h1>Marlene Sophia Alves</h1>
                   <small style="font-weight: normal">@marnela_alves</small>
@@ -173,7 +173,6 @@ body {
 }
 
 .menu-bottom {
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
   padding: 15px 0;
   li {
     padding: 8px 0;
