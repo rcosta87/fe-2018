@@ -14,7 +14,7 @@ Acesse: http://www.parkingsite.com.br/fe-2018/#/
 
 OU
 
-1. Clone este respositório
+Clone este respositório e execute os comandos:
 
 ```bash
 cd fe-2018
