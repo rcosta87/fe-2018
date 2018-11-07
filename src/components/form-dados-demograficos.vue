@@ -1,6 +1,7 @@
 <template>
-   <formulario-wrap section_title="Dados Demográficos">
+   <formulario-wrap>
       <div class="form-wrap">
+        <h1 class="title-content">Dados Demográficos</h1>
          <div class="space"></div>
          <form class="row" id="dados_demograficos">
             <div class="form-group row">
@@ -210,7 +211,7 @@
             <div class="space"></div>
          </form>
       </div>
-      <nav-forms titulo="Endereços" rota="/enderecos"></nav-forms>
+      <nav-forms titulo="Endereços" rota="/enderecos" prev="/nomes"></nav-forms>
    </formulario-wrap>
 </template>
 

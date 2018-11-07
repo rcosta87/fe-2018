@@ -1,6 +1,7 @@
 <template>
-   <formulario-wrap section_title="Endereços">
+   <formulario-wrap>
       <div class="form-wrap">
+        <h1 class="title-content">Endereços</h1>
          <div class="space"></div>
          <form class="row" id="enderecos">
             <div class="form-group row">
@@ -24,9 +25,9 @@
                      <legend>Indicador de Acurácia</legend>
                      <div class="acuracia" >
                         <span>Dia: </span>
-                        <input  type="radio"  name="acurado" value="1">Acurado<br>
-                        <input  type="radio"  name="estimado" value="2">Estimado<br>
-                        <input type="radio" name="desconhecido" value="3">Desconhecido<br>
+                        <div><input  type="radio" name="acurado" value="1">Acurado<br></div>
+                        <div><input  type="radio" name="estimado" value="2">Estimado<br></div>
+                        <div><input  type="radio" name="desconhecido" value="3">Desconhecido<br></div>
                      </div>
                      <div class="acuracia" >
                         <span>Mês: </span>
@@ -127,7 +128,7 @@
             </div>
          </form>
       </div>
-      <nav-forms titulo="Comunicações Eletrônicas" rota="/comunicacoes"></nav-forms>
+      <nav-forms titulo="Comunicações Eletrônicas" rota="/comunicacoes" prev="/dados-demograficos"></nav-forms>
    </formulario-wrap>
 </template>
 

@@ -2,64 +2,7 @@
   <div id="app">
      <div class="container-fluid">
       <div class="row row-sidebar">
-         <div class="col-xs-12 col-md-2 sidebar-column">
-            <!--Sidebar-->
-            <aside class="sidebar">
-               <!--Title-->
 
-               <div class="sidebar-container">
-               <section id="intro-user">
-                  <div class="thumb">
-                     <img src="http://www.parkingsite.com.br/fe-2018/static/photo-1524593689594-aae2f26b75ab.jpg" alt="">
-                  </div>
-                  <h1>Marlene Sophia Alves</h1>
-                  <small style="font-weight: normal">@marnela_alves</small>
-               </section>
-               <!--Title-->
-               <!--Menu-->
-               <nav id="menu-principal">
-                  <ul class="menu">
-                     <li >
-                        <a v-on:click="turnActive()" target="javascript:void(0)" style="cursor: pointer">Novo paciente</a>
-                        <ul class="sub-menu" v-show="isActive">
-                           <li>
-                              <router-link to="/">Indenficadores</router-link>
-                           </li>
-                           <li>
-                              <router-link to="/nomes">Nomes</router-link>
-                           </li>
-                           <li>
-                              <router-link to="/dados-demograficos">Dados Demográficos</router-link>
-                           </li>
-                           <li>
-                              <router-link to="/enderecos">Endereços</router-link>
-                           </li>
-                           <li>
-                              <router-link to="/comunicacoes">Comunicações Eletrônicas</router-link>
-                           </li>
-                           <li>
-                              <router-link to="/vinculos">Vínculos</router-link>
-                           </li>
-                        </ul>
-                     </li>
-                     <li>
-                        <router-link to="/">Pacientes</router-link>
-                     </li>
-                  </ul>
-               </nav>
-               <!--Menu-->
-               <nav>
-                  <ul class="menu-bottom">
-                     <li>
-                        <router-link to="/">Sair</router-link>
-                     </li>
-                  </ul>
-               </nav>
-
-               </div>
-            </aside>
-            <!--Sidebar-->
-         </div>
      <router-view/>
 
       </div>
@@ -91,14 +34,9 @@ export default {
 @import "@/assets/sass/media_queries.scss";
 @import "@/assets/icon-font.min.scss";
 
-.sidebar-container {
-  position: fixed;
-  width: 100%;
-}
-
 body {
   font-family: "Catamaran", sans-serif;
-  background-color: #f8f8f8;
+  background-color: #eceff1;
   position: relative;
 }
 
@@ -115,6 +53,11 @@ body {
   padding: 90px 0 50px;
   color: #546e7a;
   font-weight: bold;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   h1 {
     padding: 15px 0;
@@ -191,25 +134,21 @@ body {
   }
 }
 
-.sidebar-column {
-  background-color: white;
-  -webkit-box-shadow: 5px 0px 21px 0px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 5px 0px 21px 0px rgba(0, 0, 0, 0.15);
-  box-shadow: 5px 0px 21px 0px rgba(0, 0, 0, 0.15);
-}
-
-.sidebar {
-  @include mobile {
-    height: auto;
-  }
-  @include desktop {
-    height: 100vh;
-  }
-  position: relative;
-}
-
 .title-content {
   font-size: 1.8rem;
-  color: white;
+  font-weight: bold;
+  margin: 60px 1rem 40px;
+  color: #4a6470;
+  position: relative;
+  display: inline-block;
+  &:after {
+    content: "";
+    width: 80px;
+    height: 2px;
+    left: 0;
+    bottom: -10px;
+    position: absolute;
+    background-color: #2193b0;
+  }
 }
 </style>

@@ -3,10 +3,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import Formulario from './components/formularios.vue'
+import Formulario from './components/main.vue'
 Vue.component('formulario-wrap', Formulario)
 import Navigation from './components/navigation.vue'
 Vue.component('nav-forms', Navigation)
+import Send from "./components/send.vue"
+Vue.component('send-btn', Send)
+import NavInnter from './components/nav-inner.vue'
+Vue.component('nav-inner', NavInnter)
 
 
 /* eslint-disable no-new */

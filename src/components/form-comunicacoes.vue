@@ -1,6 +1,7 @@
 <template>
-   <formulario-wrap section_title="Comunicações Eletrônicas">
+   <formulario-wrap>
       <div class="form-wrap">
+        <h1 class="title-content">Comunicações Eletrônicas</h1>
          <div class="space"></div>
          <form class="row" id="comunicacoes">
             <div class="col-xs-12 col-md-3">
@@ -42,7 +43,7 @@
          </form>
          <div class="space"></div>
       </div>
-      <nav-forms titulo="Vínculos" rota="/vinculos"></nav-forms>
+      <nav-forms titulo="Vínculos" rota="/vinculos" prev="/enderecos"></nav-forms>
    </formulario-wrap>
 </template>
 

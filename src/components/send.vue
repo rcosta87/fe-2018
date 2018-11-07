@@ -1,17 +1,14 @@
 <template>
-<div>
    <nav id="form-navigation">
       <router-link class="btn-prev" :to="prev" v-show="!hasNext">Voltar</router-link>
-      <router-link class="next" :to="rota"><span>{{titulo}} / </span>Próximo</router-link>
+      <router-link class="next" :to="rota">Salvar</router-link>
+      <div style="height: 150px; width: 100%;"></div>
    </nav>
-   <div style="height: 150px; width: 100%;"></div>
-  </div>
 </template>
 
 <script>
 export default {
   props: {
-    titulo: String,
     rota: String,
     prev: String,
     hasNext: Boolean
@@ -19,31 +16,21 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "@/assets/sass/media_queries.scss";
 #form-navigation {
-  width: 90%;
-  margin: 50px auto 0;
   position: relative;
+  width: 90%;
+  margin: 50px auto;
+  padding-left: 2em;
+  padding-right: 2em;
 
   a {
     text-decoration: none;
   }
 
-  .btn-prev,
-  .next {
-    @include mobile {
-      position: relative;
-      display: inline-block;
-      margin: 15px 0;
-    }
-    @include desktop {
-      position: absolute;
-    }
-  }
   .btn-prev {
     color: #7c96a2;
     cursor: pointer;
-
+    position: absolute;
     left: 0;
     padding: 0.75rem 1.25rem;
     &:before {
@@ -58,6 +45,7 @@ export default {
   }
 
   .next {
+    position: absolute;
     right: 0;
     border-radius: 50px;
     padding: 0.75rem 1.25rem;

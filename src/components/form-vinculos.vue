@@ -1,6 +1,7 @@
 <template>
-   <formulario-wrap section_title="Vínculos">
+   <formulario-wrap>
       <div class="form-wrap">
+         <h1 class="title-content">Vínculos</h1>
          <div class="space"></div>
          <form class="row" id="vinculos">
             <div class="col-xs-12 col-md-3">
@@ -46,7 +47,9 @@
          </form>
          <div class="space"></div>
       </div>
+      <send-btn rota="/" prev="/comunicacoes"></send-btn>
    </formulario-wrap>
+
 </template>
 
 <script>

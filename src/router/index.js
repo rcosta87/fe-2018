@@ -6,12 +6,22 @@ import DadosDemograficos from '@/components/form-dados-demograficos'
 import Enderecos from '@/components/form-enderecos'
 import Comunicacoes from '@/components/form-comunicacoes.vue'
 import Vinculos from '@/components/form-vinculos'
+import Home from '@/components/home'
 
 Vue.use(Router)
 
 export default new Router({
     routes: [{
+            path: '/home',
+            name: 'Home',
+            component: Home
+        },
+        {
             path: '/',
+            name: 'Home',
+            component: Home
+        }, {
+            path: '/identificadores',
             name: 'Indenficadores',
             component: Indenficadores
         }, {

@@ -1,6 +1,8 @@
 <template>
-   <formulario-wrap section_title="Indenficicadores">
+   <formulario-wrap>
       <div class="form-wrap">
+
+        <h1 class="title-content">Identificadores</h1>
          <div class="space"></div>
          <form class="row" id="indenficadores">
             <div class="col-xs-12 col-md-6">
@@ -107,7 +109,7 @@
             <div class="space"></div>
          </form>
       </div>
-      <nav-forms titulo="Nomes" rota="/nomes"></nav-forms>
+      <nav-forms titulo="Nomes" rota="/nomes" prev="" hasNext></nav-forms>
    </formulario-wrap>
 </template>
 
