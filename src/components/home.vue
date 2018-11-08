@@ -37,17 +37,26 @@ export default {};
 </script>
 
 <style lang="scss">
+@import "@/assets/sass/media_queries.scss";
 .intro-home {
   width: 100%;
-  margin: 90px auto 90px;
   display: grid;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
-  grid-template-columns: 450px 1fr;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    margin: 20px auto 20px;
+  }
+  @include desktop {
+    grid-template-columns: 450px 1fr;
+    margin: 90px auto 90px;
+  }
 }
 
 .editar-pacientes,
 .cadastrar-pacientes {
+  margin-bottom: 20px;
   p {
     margin: 18px 0;
     color: #7c96a2;
@@ -108,7 +117,14 @@ export default {};
 
 .intro-section-2 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  @include mobile {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  @include desktop {
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+  }
   grid-column-gap: 20px;
   margin-right: 2rem;
 

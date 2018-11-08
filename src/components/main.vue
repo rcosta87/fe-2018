@@ -73,7 +73,7 @@ $height-header: 650px;
   }
   li {
     color: #fff;
-    padding: 15px;
+    padding: 8px;
     a {
       color: white;
       text-decoration: none;
@@ -143,6 +143,7 @@ $height-header: 650px;
 .logo {
   width: 120px;
   height: auto;
+  padding: 8px;
   #logo-portal {
     width: 100%;
     fill: #fff;

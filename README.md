@@ -10,7 +10,7 @@ Universidade Federal de Goiás - GO
 
 ## Visualização do Projeto
 
-Acesse: http://www.parkingsite.com.br/fe-2018/#/
+Acesse: https://rcosta87.github.io/#/
 
 OU
 
