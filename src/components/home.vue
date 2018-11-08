@@ -33,7 +33,7 @@
                       </div>
                       <p>Selecione esta opção para visualizar os pacientes cadastrados, editar dados ou excluir
                         </p>
-                      <router-link to="/identificadores">Acessar</router-link>
+                      <router-link to="/pacientes">Acessar</router-link>
                       </div>
                   </div>
                   <div class="dashbord-pacientes-cadastrados">
