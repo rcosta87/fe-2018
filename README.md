@@ -23,3 +23,17 @@ npm install
 
 npm run dev
 ```
+
+## Bibliotecas/Frameworks
+
+
+### Vuejs
+https://vuejs.org/
+
+
+### Flexbox Grid
+http://flexboxgrid.com/
+
+
+### Vue Apexcharts
+https://madewithvuejs.com/go/vue-apexcharts
