@@ -1,6 +1,8 @@
 <template>
    <formulario-wrap>
       <div class="form-wrap">
+        <nav-inner></nav-inner>
+
         <h1 class="title-content">Dados Demográficos</h1>
          <div class="space"></div>
          <form class="row" id="dados_demograficos">

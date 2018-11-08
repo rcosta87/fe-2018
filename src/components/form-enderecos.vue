@@ -1,6 +1,9 @@
 <template>
    <formulario-wrap>
       <div class="form-wrap">
+
+        <nav-inner></nav-inner>
+
         <h1 class="title-content">Endereços</h1>
          <div class="space"></div>
          <form class="row" id="enderecos">

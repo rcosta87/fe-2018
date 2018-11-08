@@ -1,10 +1,12 @@
 <template>
 
-  <section id="indentificadores" class="col-xs-12 no-padding">
+  <section id="indentificadores" class="col-xs-12 no-padding" >
       <header class="wave-bg">
-        <svg class="nectar-shape-divider" id="curve" fill="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" preserveAspectRatio="none">
-         <path d="M 1000 299 l 2 -279 c -155 -36 -310 135 -415 164 c -102.64 28.35 -149 -32 -232 -31 c -80 1 -142 53 -229 80 c -65.54 20.34 -101 15 -126 11.61 v 54.39 z"></path> <path d="M 1000 286 l 2 -252 c -157 -43 -302 144 -405 178 c -101.11 33.38 -159 -47 -242 -46 c -80 1 -145.09 54.07 -229 87 c -65.21 25.59 -104.07 16.72 -126 10.61 v 22.39 z"></path> <path d="M 1000 300 l 1 -230.29 c -217 -12.71 -300.47 129.15 -404 156.29 c -103 27 -174 -30 -257 -29 c -80 1 -130.09 37.07 -214 70 c -61.23 24 -108 15.61 -126 10.61 v 22.39 z"></path>
-        </svg>
+        <div class="shape-wave">
+          <svg id="curve" fill="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" preserveAspectRatio="none">
+              <path d="M 1000 299 l 2 -279 c -155 -36 -310 135 -415 164 c -102.64 28.35 -149 -32 -232 -31 c -80 1 -142 53 -229 80 c -65.54 20.34 -101 15 -126 11.61 v 54.39 z"></path> <path d="M 1000 286 l 2 -252 c -157 -43 -302 144 -405 178 c -101.11 33.38 -159 -47 -242 -46 c -80 1 -145.09 54.07 -229 87 c -65.21 25.59 -104.07 16.72 -126 10.61 v 22.39 z"></path> <path d="M 1000 300 l 1 -230.29 c -217 -12.71 -300.47 129.15 -404 156.29 c -103 27 -174 -30 -257 -29 c -80 1 -130.09 37.07 -214 70 c -61.23 24 -108 15.61 -126 10.61 v 22.39 z"></path>
+          </svg>
+        </div>
         <div class="bg-image"></div>
         <div class="bg-overlay"></div>
       </header>
@@ -23,9 +25,6 @@
       </nav>
 
 
-
-
-
    <slot></slot>
   </section>
 
@@ -38,9 +37,16 @@ export default {};
 @import "@/assets/sass/media_queries.scss";
 @import "@/assets/icon-font.min.scss";
 
-$height-header: 650px;
+$height-header: 100vh;
+$height-header-large: calc(100vh - 250px);
+
 #indentificadores {
   position: relative;
+}
+
+.shape-wave {
+  height: 250px;
+  overflow: hidden;
 }
 
 #main-nav {
@@ -92,13 +98,17 @@ $height-header: 650px;
       font-weight: bold;
     }
 
+    &:before {
+      font-family: Linearicons-Free;
+      opacity: 0.8;
+      padding-right: 5px;
+      padding-top: 2px;
+      color: #ffc159;
+    }
+
     &:first-child {
       &:before {
         content: "\e800";
-        font-family: Linearicons-Free;
-        opacity: 0.8;
-        padding-right: 5px;
-        padding-top: 2px;
         font-size: 15px;
       }
     }
@@ -106,10 +116,6 @@ $height-header: 650px;
     &:nth-of-type(2) {
       &:before {
         content: "\e82a";
-        font-family: Linearicons-Free;
-        opacity: 0.8;
-        padding-right: 5px;
-        padding-top: 2px;
         font-size: 13.9px;
       }
     }
@@ -117,11 +123,6 @@ $height-header: 650px;
     &:nth-of-type(3) {
       &:before {
         content: "\e82b";
-        font-family: Linearicons-Free;
-        opacity: 0.8;
-
-        padding-right: 5px;
-        padding-top: 2px;
         font-size: 15px;
       }
     }
@@ -129,11 +130,6 @@ $height-header: 650px;
     &:last-child {
       &:before {
         content: "\e820";
-        font-family: Linearicons-Free;
-        opacity: 0.8;
-
-        padding-right: 5px;
-        padding-top: 2px;
         font-size: 15px;
       }
     }
@@ -146,7 +142,7 @@ $height-header: 650px;
   padding: 8px;
   #logo-portal {
     width: 100%;
-    fill: #fff;
+    fill: #ffc159;
   }
   padding: 15px 0;
   @include mobile {
@@ -156,18 +152,29 @@ $height-header: 650px;
     margin-bottom: auto;
   }
 }
+
+.wave-bg,
+.bg-image,
+.bg-overlay {
+  @include mobile {
+    height: $height-header;
+  }
+  @include ex-large {
+    height: $height-header-large;
+  }
+}
 .wave-bg {
   position: absolute;
   margin: 0;
   padding: 0;
   width: 100%;
-  height: $height-header;
+
   z-index: -1;
 }
 
 .bg-image {
   width: 100%;
-  height: $height-header;
+
   position: absolute;
   top: 0;
   bottom: 0;
@@ -180,21 +187,21 @@ $height-header: 650px;
 
 .bg-overlay {
   width: 100%;
-  height: $height-header;
+
   position: absolute;
   top: 0;
   bottom: 0;
   z-index: -1;
-  background: #2193b0; /* fallback for old browsers */
+  background: #00b4db; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
-    #6dd5ed,
-    #2193b0
+    #0083b0,
+    #00b4db
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
-    #6dd5ed,
-    #2193b0
+    #0083b0,
+    #00b4db
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   opacity: 0.8;

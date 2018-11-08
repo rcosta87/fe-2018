@@ -1,6 +1,7 @@
 <template>
    <formulario-wrap >
       <div class="form-wrap">
+        <nav-inner></nav-inner>
          <h1 class="title-content">Nomes</h1>
          <form class="row" id="nomes">
             <div class="col-xs-12 col-md-6">

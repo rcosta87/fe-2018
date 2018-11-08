@@ -1,7 +1,7 @@
 <template>
   <div id="app">
      <div class="container-fluid">
-      <div class="row row-sidebar">
+      <div class="row ">
 
      <router-view/>
 
@@ -137,8 +137,8 @@ body {
 .title-content {
   font-size: 1.8rem;
   font-weight: bold;
-  margin: 60px 1rem 40px;
-  color: #4a6470;
+  margin: 30px 1rem 15px;
+  color: #2193b0;
   position: relative;
   display: inline-block;
   &:after {
@@ -148,7 +148,7 @@ body {
     left: 0;
     bottom: -10px;
     position: absolute;
-    background-color: #2193b0;
+    background-color: #ffc107;
   }
 }
 </style>

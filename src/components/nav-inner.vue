@@ -15,24 +15,37 @@ export default {};
 </script>
 <style lang="scss">
 #header-pacientes {
-  padding: 20px 2rem 20px;
+  padding: 20px 5px 10px;
   z-index: 1;
   ul {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     flex-wrap: wrap;
   }
 
   li {
-    padding: 10px;
+    padding: 5px;
     a {
       text-decoration: none;
       color: #7c96a2;
-      font-size: 15px;
+      font-size: 13px;
+    }
+
+    &:after {
+      content: "\e876";
+      font-family: "Linearicons-Free";
+      padding-left: 5px;
+      color: #2193b0;
+      font-size: 9px;
+    }
+
+    &:last-child {
+      &::after {
+        content: "";
+      }
     }
 
     a.router-link-active {
-      border-bottom: 2px solid #7c96a2;
       font-weight: bold;
     }
   }

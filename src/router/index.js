@@ -7,6 +7,7 @@ import Enderecos from '@/components/form-enderecos'
 import Comunicacoes from '@/components/form-comunicacoes.vue'
 import Vinculos from '@/components/form-vinculos'
 import Home from '@/components/home'
+import Pacientes from '@/components/pacientes'
 
 Vue.use(Router)
 
@@ -48,6 +49,11 @@ export default new Router({
             path: '/vinculos',
             name: "Vínculos",
             component: Vinculos
+        },
+        {
+            path: "/pacientes",
+            name: "Pacientes",
+            component: Pacientes
         }
     ]
 })
