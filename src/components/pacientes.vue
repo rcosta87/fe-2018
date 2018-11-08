@@ -19,7 +19,7 @@
             </div>
             <div class="paciente">
               <div class="title">
-                <input type="checkbox" class="checkbox-mail">
+
                 <h2>Calebe Emanuel Otávio Fogaça</h2>
               </div>
               <div class="date">
@@ -34,7 +34,7 @@
             </div>
             <div class="paciente">
               <div class="title">
-                <input type="checkbox" class="checkbox-mail">
+
                 <h2>Calebe Emanuel Otávio Fogaça</h2>
               </div>
               <div class="date">
@@ -49,7 +49,7 @@
             </div>
             <div class="paciente">
               <div class="title">
-                <input type="checkbox" class="checkbox-mail">
+
                 <h2>Calebe Emanuel Otávio Fogaça</h2>
               </div>
               <div class="date">
@@ -64,7 +64,7 @@
             </div>
             <div class="paciente">
               <div class="title">
-                <input type="checkbox" class="checkbox-mail">
+
                 <h2>Calebe Emanuel Otávio Fogaça</h2>
               </div>
               <div class="date">
@@ -79,7 +79,7 @@
             </div>
             <div class="paciente">
               <div class="title">
-                <input type="checkbox" class="checkbox-mail">
+
                 <h2>Calebe Emanuel Otávio Fogaça</h2>
               </div>
               <div class="date">
@@ -94,7 +94,7 @@
             </div>
             <div class="paciente">
               <div class="title">
-                <input type="checkbox" class="checkbox-mail">
+
                 <h2>Calebe Emanuel Otávio Fogaça</h2>
               </div>
               <div class="date">
@@ -109,7 +109,7 @@
             </div>
             <div class="paciente">
               <div class="title">
-                <input type="checkbox" class="checkbox-mail">
+
                 <h2>Calebe Emanuel Otávio Fogaça</h2>
               </div>
               <div class="date">
@@ -124,7 +124,7 @@
             </div>
             <div class="paciente">
               <div class="title">
-                <input type="checkbox" class="checkbox-mail">
+
                 <h2>Calebe Emanuel Otávio Fogaça</h2>
               </div>
               <div class="date">
@@ -139,7 +139,6 @@
             </div>
             <div class="paciente">
               <div class="title">
-                <input type="checkbox" class="checkbox-mail">
                 <h2>Calebe Emanuel Otávio Fogaça</h2>
               </div>
               <div class="date">
