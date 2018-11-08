@@ -1,6 +1,6 @@
 <template>
 <div>
-   <nav id="form-navigation">
+   <nav id="form-navigation-bottom">
       <router-link class="btn-prev" :to="prev" v-show="!hasNext">Voltar</router-link>
       <router-link class="next" :to="rota"><span>{{titulo}} / </span>Próximo</router-link>
    </nav>
@@ -20,7 +20,7 @@ export default {
 </script>
 <style lang="scss">
 @import "@/assets/sass/media_queries.scss";
-#form-navigation {
+#form-navigation-bottom {
   width: 90%;
   margin: 50px auto 0;
   position: relative;
@@ -43,7 +43,6 @@ export default {
   .btn-prev {
     color: #7c96a2;
     cursor: pointer;
-
     left: 0;
     padding: 0.75rem 1.25rem;
     &:before {

@@ -154,10 +154,11 @@
             </div>
 
 
-        <div class="space"></div>
-        <div class="space"></div>
-        <div class="space"></div>
       </div>
+
+        <div class="space"></div>
+        <div class="space"></div>
+        <div class="space"></div>
   </formulario-wrap>
 </template>
 <script>
