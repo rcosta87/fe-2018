@@ -18,8 +18,9 @@ export default {
   }
 };
 </script>
-<style lang="scss">
+<style lang="scss" >
 @import "@/assets/sass/media_queries.scss";
+
 #form-navigation-bottom {
   width: 90%;
   margin: 50px auto 0;

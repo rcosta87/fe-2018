@@ -8,6 +8,7 @@ import Comunicacoes from '@/components/form-comunicacoes.vue'
 import Vinculos from '@/components/form-vinculos'
 import Home from '@/components/home'
 import Pacientes from '@/components/pacientes'
+import Sair from "@/components/login.vue"
 
 Vue.use(Router)
 
@@ -54,6 +55,11 @@ export default new Router({
             path: "/pacientes",
             name: "Pacientes",
             component: Pacientes
+        },
+        {
+            path: "/sair",
+            name: "Sair",
+            component: Sair
         }
     ]
 })
