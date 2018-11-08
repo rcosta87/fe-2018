@@ -104,8 +104,10 @@ $height-header-large: calc(100vh - 250px);
     }
 
     &:before {
-      font-family: Linearicons-Free;
-      opacity: 0.8;
+      font-family: "Font Awesome 5 Free";
+      font-style: normal;
+      font-weight: 900;
+      opacity: 0.9;
       padding-right: 5px;
       padding-top: 2px;
       color: #ffc159;
@@ -113,28 +115,28 @@ $height-header-large: calc(100vh - 250px);
 
     &:first-child {
       &:before {
-        content: "\e800";
+        content: "\f015";
         font-size: 15px;
       }
     }
 
     &:nth-of-type(2) {
       &:before {
-        content: "\e82a";
+        content: "\f007";
         font-size: 13.9px;
       }
     }
 
     &:nth-of-type(3) {
       &:before {
-        content: "\e82b";
+        content: "\f0c0";
         font-size: 15px;
       }
     }
 
     &:last-child {
       &:before {
-        content: "\e820";
+        content: "\f2f5";
         font-size: 15px;
       }
     }
@@ -184,7 +186,7 @@ $height-header-large: calc(100vh - 250px);
   top: 0;
   bottom: 0;
   z-index: -2;
-  background-image: url("../assets/marcelo-leal-664865-unsplash.jpg");
+  background-image: url("../assets/hospital-image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top left;
