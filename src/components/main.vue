@@ -301,7 +301,12 @@ textarea {
 
   .acuracia {
     display: flex;
-    flex-wrap: nowrap;
+    @include mobile {
+      flex-wrap: wrap;
+    }
+    @include desktop {
+      flex-wrap: nowrap;
+    }
     input {
       width: auto;
       text-indent: 0%;

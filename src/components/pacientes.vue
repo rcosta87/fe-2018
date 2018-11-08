@@ -1,7 +1,6 @@
 <template>
   <formulario-wrap>
-      <div class="row">
-        <div class="col-xs-12">
+
           <div class="pacientes-list-wrap">
             <h1 class="title-content">Pacientes Cadastrados</h1>
             <div class="filter">
@@ -154,8 +153,6 @@
               </div>
             </div>
 
-          </div>
-        </div>
 
         <div class="space"></div>
         <div class="space"></div>
@@ -173,6 +170,7 @@ export default {
 };
 </script>
 <style lang="scss">
+@import "@/assets/sass/media_queries.scss";
 .filter {
   padding: 25px 2rem;
   display: flex;
@@ -205,7 +203,12 @@ export default {
   min-height: 450px;
   -webkit-box-shadow: 8px 10px 12px 0 rgba(46, 61, 73, 0.2);
   box-shadow: 8px 10px 12px 0 rgba(46, 61, 73, 0.2);
-  padding: 0 2rem;
+  @include mobile {
+    padding: 0;
+  }
+  @include desktop {
+    padding: 0 2rem;
+  }
 
   h1 {
     margin: 40px 2rem;
