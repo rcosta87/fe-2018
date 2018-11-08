@@ -4,7 +4,20 @@
         <div class="col-xs-12">
           <div class="pacientes-list-wrap">
             <h1 class="title-content">Pacientes Cadastrados</h1>
+            <div class="filter">
+              <div>
+               <label for="uso">Filtrar por:</label>
+               <select id="uso" v-model="selection">
+                  <option value="indenficidador">Indentificador</option>
+                  <option value="nome">Nome</option>
+               </select>
+              </div>
+               <div v-show="selection" class="search">
+                  <label for="pesquisar">Entrar com {{selection}} : </label>
+                  <input type="search" name="pesquisar" class="search-input" placeholder="O que você procura?">
+               </div>
 
+            </div>
             <div class="paciente">
               <div class="title">
                 <input type="checkbox" class="checkbox-mail">
@@ -151,9 +164,38 @@
   </formulario-wrap>
 </template>
 <script>
-export default {};
+export default {
+  data: function() {
+    return {
+      selection: ""
+    };
+  }
+};
 </script>
 <style lang="scss">
+.filter {
+  padding: 25px 2rem;
+  display: flex;
+
+  .search {
+    margin-left: 25px;
+  }
+  select,
+  input {
+    background-color: transparent;
+    border: 1px solid #dbe2e8;
+    border-radius: 4px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+    padding: 10px 0;
+    margin-bottom: 1.2rem;
+    text-indent: 0.8rem;
+    font-family: inherit;
+    width: 150px;
+  }
+}
 .pacientes-list-wrap {
   background-color: white;
   margin: 0 auto;
@@ -163,6 +205,7 @@ export default {};
   min-height: 450px;
   -webkit-box-shadow: 8px 10px 12px 0 rgba(46, 61, 73, 0.2);
   box-shadow: 8px 10px 12px 0 rgba(46, 61, 73, 0.2);
+  padding: 0 2rem;
 
   h1 {
     margin: 40px 2rem;
@@ -199,9 +242,28 @@ export default {};
 
 .paciente {
   display: flex;
+  flex-wrap: wrap;
   padding: 15px 2rem;
   justify-content: space-between;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.search-input {
+  position: relative;
+  width: 150px;
+
+  &:before {
+    content: "\f002";
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: 900;
+    position: absolute;
+    right: 15px;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 </style>
 
