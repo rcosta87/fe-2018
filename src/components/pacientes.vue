@@ -27,7 +27,7 @@
               </div>
               <div class="actions">
                 <ul>
-                  <li><router-link to="/identificadores"><i class="far fa-edit"></i></router-link></li>
+                  <li><router-link to="/identificadores-edit"><i class="far fa-edit"></i></router-link></li>
                   <li><router-link to="/"><i class="far fa-trash-alt"></i></router-link></li>
                 </ul>
               </div>
@@ -42,7 +42,7 @@
               </div>
               <div class="actions">
                 <ul>
-                  <li><router-link to="/identificadores"><i class="far fa-edit"></i></router-link></li>
+                  <li><router-link to="/identificadores-edit"><i class="far fa-edit"></i></router-link></li>
                   <li><router-link to="/"><i class="far fa-trash-alt"></i></router-link></li>
                 </ul>
               </div>
@@ -57,7 +57,7 @@
               </div>
               <div class="actions">
                 <ul>
-                  <li><router-link to="/identificadores"><i class="far fa-edit"></i></router-link></li>
+                  <li><router-link to="/identificadores-edit"><i class="far fa-edit"></i></router-link></li>
                   <li><router-link to="/"><i class="far fa-trash-alt"></i></router-link></li>
                 </ul>
               </div>
@@ -72,7 +72,7 @@
               </div>
               <div class="actions">
                 <ul>
-                  <li><router-link to="/identificadores"><i class="far fa-edit"></i></router-link></li>
+                  <li><router-link to="/identificadores-edit"><i class="far fa-edit"></i></router-link></li>
                   <li><router-link to="/"><i class="far fa-trash-alt"></i></router-link></li>
                 </ul>
               </div>
@@ -87,7 +87,7 @@
               </div>
               <div class="actions">
                 <ul>
-                  <li><router-link to="/identificadores"><i class="far fa-edit"></i></router-link></li>
+                  <li><router-link to="/identificadores-edit"><i class="far fa-edit"></i></router-link></li>
                   <li><router-link to="/"><i class="far fa-trash-alt"></i></router-link></li>
                 </ul>
               </div>
@@ -102,7 +102,7 @@
               </div>
               <div class="actions">
                 <ul>
-                  <li><router-link to="/identificadores"><i class="far fa-edit"></i></router-link></li>
+                  <li><router-link to="/identificadores-edit"><i class="far fa-edit"></i></router-link></li>
                   <li><router-link to="/"><i class="far fa-trash-alt"></i></router-link></li>
                 </ul>
               </div>
@@ -117,7 +117,7 @@
               </div>
               <div class="actions">
                 <ul>
-                  <li><router-link to="/identificadores"><i class="far fa-edit"></i></router-link></li>
+                  <li><router-link to="/identificadores-edit"><i class="far fa-edit"></i></router-link></li>
                   <li><router-link to="/"><i class="far fa-trash-alt"></i></router-link></li>
                 </ul>
               </div>
@@ -132,7 +132,7 @@
               </div>
               <div class="actions">
                 <ul>
-                  <li><router-link to="/identificadores"><i class="far fa-edit"></i></router-link></li>
+                  <li><router-link to="/identificadores-edit-edit"><i class="far fa-edit"></i></router-link></li>
                   <li><router-link to="/"><i class="far fa-trash-alt"></i></router-link></li>
                 </ul>
               </div>
@@ -146,7 +146,7 @@
               </div>
               <div class="actions">
                 <ul>
-                  <li><router-link to="/identificadores"><i class="far fa-edit"></i></router-link></li>
+                  <li><router-link to="/identificadores-edit"><i class="far fa-edit"></i></router-link></li>
                   <li><router-link to="/"><i class="far fa-trash-alt"></i></router-link></li>
                 </ul>
               </div>

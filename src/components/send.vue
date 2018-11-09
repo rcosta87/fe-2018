@@ -2,7 +2,7 @@
 <div>
    <nav id="form-navigation">
       <router-link class="btn-prev" :to="prev" v-show="!hasNext">Voltar</router-link>
-      <a class="next" :to="rota" @click.stop.prevent="popUp()">Salvar</a>
+      <a class="send" :to="rota" @click.stop.prevent="popUp()">Salvar</a>
       <div style="height: 150px; width: 100%;"></div>
    </nav>
    <div class="popupw-wrap" v-show="active">
@@ -133,7 +133,7 @@ export default {
     }
   }
 
-  .next {
+  .send {
     position: absolute;
     right: 0;
     border-radius: 50px;
@@ -144,13 +144,7 @@ export default {
     font-weight: bold;
     color: #d3d3d3;
     cursor: pointer;
-    &:after {
-      content: "\f061";
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      border-radius: 0px 50px 50px 0px;
-      margin-left: 9px;
-    }
+
     span {
       color: #fff;
       font-weight: bold;

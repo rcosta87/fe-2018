@@ -11,7 +11,8 @@ import Send from "./components/send.vue"
 Vue.component('send-btn', Send)
 import NavInnter from './components/nav-inner.vue'
 Vue.component('nav-inner', NavInnter)
-
+import NavInnterEdit from './components/nav-inner-edit.vue'
+Vue.component('nav-inneredit', NavInnterEdit)
 
 /* eslint-disable no-new */
 new Vue({
