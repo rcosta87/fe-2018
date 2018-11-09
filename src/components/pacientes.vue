@@ -175,9 +175,20 @@ export default {
   padding: 25px 2rem;
   display: flex;
 
-  .search {
-    margin-left: 25px;
+  @include mobile {
+    flex-wrap: wrap;
+    .search {
+      margin-left: 0;
+    }
   }
+
+  @include desktop {
+    flex-wrap: nowrap;
+    .search {
+      margin-left: 25px;
+    }
+  }
+
   select,
   input {
     background-color: transparent;

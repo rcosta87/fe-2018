@@ -20,8 +20,7 @@ export default new Router({
         },
         {
             path: '/',
-            name: 'Home',
-            component: Home
+            redirect: '/home'
         }, {
             path: '/identificadores',
             name: 'Indenficadores',
