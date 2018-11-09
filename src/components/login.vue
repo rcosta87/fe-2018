@@ -36,6 +36,7 @@ export default {
 };
 </script>
 <style lang="scss">
+@import "@/assets/sass/media_queries.scss";
 .login-wrap {
   background-color: #fff;
   padding: 60px 40px;
@@ -43,7 +44,12 @@ export default {
   box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, 0.2);
   border-radius: 5px;
   opacity: 0.95;
-  width: 280px;
+  @include mobile {
+    width: calc(280px - 80px);
+  }
+  @include desktop {
+    width: 280px;
+  }
   position: relative;
   top: 120px;
   margin: 0 auto;

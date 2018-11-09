@@ -201,12 +201,25 @@ export default {
       "e";
     padding: 20px;
   }
-  @include desktop {
+
+  @include tablet {
+    grid-template-areas:
+      "a b"
+      "a c"
+      "d e";
+  }
+
+  @include large {
     grid-template-areas:
       "a b c"
       "a d e";
     padding: 0;
-    grid-template-columns: 350px 1fr 1fr;
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include desktop {
+      grid-template-columns: 350px 1fr 1fr;
+    }
   }
 
   > div {
