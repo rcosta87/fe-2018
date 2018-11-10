@@ -1,14 +1,48 @@
 <template>
    <formulario-wrap>
-
       <div class="form-wrap">
-        <nav-inner></nav-inner>
+         <nav-inner></nav-inner>
          <h1 class="title-content">Vínculos</h1>
          <div class="space"></div>
          <form class="row" id="vinculos">
-            <div class="col-xs-12 col-md-3">
-               <label for="identificador">Indentificador</label>
-               <input type="text" name="indetificador">
+            <div class="col-xs-12 col-md-6">
+               <label for="identificador">Tipo do identificador</label>
+               <select
+                  id="indentificador"
+                  name="identificador">
+                  <option selected value="01">Número do prontuário</option>
+                  <option value="02">Radiologia</option>
+                  <option value="21">Patologia</option>
+                  <option value="23">Farmácia</option>
+               </select>
+            </div>
+            <div class="col-xs-12 col-md-6">
+               <label for="area-geografica">Área geográfica</label>
+               <select
+                  id="area-geografica"
+                  name="area-geografica">
+                  <option selected value="1">Local</option>
+                  <option value="2">Área/região/distrito</option>
+                  <option value="3">Estado/província/território</option>
+               </select>
+            </div>
+            <div class="col-xs-12 col-md-6">
+               <label for="designacao">Designação</label>
+               <input type="text"
+                  id="designacao"
+                  name="designacao" size="25">
+            </div>
+            <div class="col-xs-12 col-md-6">
+               <label for="data">Data</label>
+               <input type="date"
+                  id="data"
+                  name="data">
+            </div>
+            <div class="col-xs-12 col-xs-12">
+               <label for="emissor">Emissor</label>
+               <input type="text"
+                  id="emissor"
+                  name="emissor" size="25">
             </div>
             <div class="col-xs-12 col-md-3">
                <label for="relacionamento">Relacionamento</label>
@@ -51,9 +85,7 @@
       </div>
       <send-btn rota="/" prev="/comunicacoes"></send-btn>
    </formulario-wrap>
-
 </template>
-
 <script>
 export default {
   name: "sidebar",

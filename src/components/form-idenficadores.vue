@@ -4,12 +4,14 @@
         <nav-inner></nav-inner>
         <h1 class="title-content">Identificadores</h1>
          <div class="space"></div>
+
          <form class="row" id="indenficadores">
+           <div id="identificador-clone" class="id-row row">
             <div class="col-xs-12 col-md-6">
                <label for="identificador">Tipo do identificador</label>
                <select
                   id="indentificador"
-                  name="identificador">
+                  name="identificador" required>
                   <option selected value="01">Número do prontuário</option>
                   <option value="02">Radiologia</option>
                   <option value="21">Patologia</option>
@@ -30,20 +32,28 @@
                <label for="designacao">Designação</label>
                <input type="text"
                   id="designacao"
-                  name="designacao" size="25">
+                  name="designacao" size="25" v-model="designacao" required>
+
             </div>
             <div class="col-xs-12 col-md-6">
                <label for="data">Data</label>
-               <input type="date"
+               <input type="date" required
                   id="data"
                   name="data">
+              </div>
+              <div class="col-xs-12 col-md-6">
+                <label for="emissor">Emissor</label>
+                <input type="text" required
+                    id="emissor"
+                    name="emissor" size="25">
+              </div>
             </div>
-            <div class="col-xs-12 col-md-6">
-               <label for="emissor">Emissor</label>
-               <input type="text"
-                  id="emissor"
-                  name="emissor" size="25">
+            <div id="id-div"></div>
+
+            <div class="col-xs-12 botao" @click.stop.prevent ="addInput">
+                <button class="addMore">Acionar indentificador</button>
             </div>
+
             <div class="form-group  row">
                <div class="col-xs-12">
                   <label for="certidao">Tipo de Certidão</label>
@@ -117,13 +127,68 @@
 import estados from "@/assets/combo_dinamico.json";
 export default {
   name: "sidebar",
+  errors: [],
+  designacao: "",
   data() {
     return {
       estados
     };
   },
-  methods: {}
+  methods: {
+    addInput: function() {
+      var id = document.getElementById("identificador-clone");
+      var idFrame = document.getElementById("id-div");
+      var clone = id.cloneNode(true);
+      idFrame.appendChild(clone);
+    }
+  }
 };
 </script>
+<style lang="scss">
+#indentificadores {
+  position: relative;
+}
+
+.id-row {
+  padding: 20px;
+  margin-bottom: 0;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.botao {
+  margin: 0 0 30px 1.3125rem;
+  width: 100%;
+  text-align: left;
+
+  button {
+    background-color: #ffc107;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 15px 30px;
+    color: white;
+    box-shadow: none;
+    border: none;
+    position: relative;
+    &:before {
+      content: "\f067";
+      font-family: "Font Awesome 5 Free";
+      font-style: normal;
+      font-weight: 900;
+      color: white;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 10px;
+      padding-right: 15px;
+    }
+  }
+}
+
+#id-div {
+  width: 100%;
+}
+</style>
+
 
 

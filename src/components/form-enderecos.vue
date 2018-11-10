@@ -1,13 +1,11 @@
 <template>
    <formulario-wrap>
       <div class="form-wrap">
-
-        <nav-inner></nav-inner>
-
-        <h1 class="title-content">Endereços</h1>
+         <nav-inner></nav-inner>
+         <h1 class="title-content">Endereços</h1>
          <div class="space"></div>
          <form class="row" id="enderecos">
-            <div class="form-group row">
+            <div class="form-group row" id="enderecos-clone">
                <div class="col-xs-12">
                   <label for="tipo_end">Tipos de Endereços</label>
                   <select name="tipo_end">
@@ -75,6 +73,30 @@
                   </fieldset>
                </div>
                <div class="space"></div>
+               <div class="col-xs-12 col-md-3">
+                  <label for="caixa_postal">Caixa Postal</label>
+                  <input type="number"  name="caixa_postal">
+               </div>
+               <div class="col-xs-12 col-md-3">
+                  <label for="cep">Cep</label>
+                  <input type="number"  name="cep" placeholder="Exemplo, 74000-010.">
+               </div>
+               <div class="col-xs-12 col-md-3">
+                  <label for="bairro">Bairro</label>
+                  <input type="text"  name="bairro" >
+               </div>
+               <div class="col-xs-12 col-md-3">
+                  <label for="distrito">Distrito</label>
+                  <input type="text"  name="distrito" >
+               </div>
+               <div class="col-xs-12">
+                  <label for="end">Endereço</label>
+                  <input type="text"  name="end" >
+               </div>
+            </div>
+            <div id="end-div"></div>
+            <div class="col-xs-12 botao" @click.stop.prevent ="addInputEnd">
+               <button class="addMore">Acionar outro endereço</button>
             </div>
             <div class="form-group row">
                <div class="col-xs-12">
@@ -109,32 +131,11 @@
                   <input type="text" name="municipio">
                </div>
             </div>
-            <div class="col-xs-12 col-md-3">
-               <label for="caixa_postal">Caixa Postal</label>
-               <input type="number"  name="caixa_postal">
-            </div>
-            <div class="col-xs-12 col-md-3">
-               <label for="cep">Cep</label>
-               <input type="number"  name="cep" placeholder="Exemplo, 74000-010.">
-            </div>
-            <div class="col-xs-12 col-md-3">
-               <label for="bairro">Bairro</label>
-               <input type="number"  name="bairro" >
-            </div>
-            <div class="col-xs-12 col-md-3">
-               <label for="distrito">Distrito</label>
-               <input type="number"  name="distrito" >
-            </div>
-            <div class="col-xs-12">
-               <label for="end">Endereço</label>
-               <input type="number"  name="end" >
-            </div>
          </form>
       </div>
       <nav-forms titulo="Comunicações Eletrônicas" rota="/comunicacoes" prev="/dados-demograficos"></nav-forms>
    </formulario-wrap>
 </template>
-
 <script>
 import estados from "@/assets/combo_dinamico.json";
 import paises from "@/assets/paises.json";
@@ -151,7 +152,47 @@ export default {
   methods: {
     currentState: function(el) {
       this.currentState = el;
+    },
+    addInputEnd: function() {
+      var id = document.getElementById("enderecos-clone");
+      var idFrame = document.getElementById("end-div");
+      var clone = id.cloneNode(true);
+      idFrame.appendChild(clone);
     }
   }
 };
 </script>
+<style lang="scss">
+.botao {
+  margin: 0 0 30px 1.3125rem;
+  width: 100%;
+  text-align: left;
+
+  button {
+    background-color: #ffc107;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 15px 30px;
+    color: white;
+    box-shadow: none;
+    border: none;
+    position: relative;
+    &:before {
+      content: "\f067";
+      font-family: "Font Awesome 5 Free";
+      font-style: normal;
+      font-weight: 900;
+      color: white;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 10px;
+      padding-right: 15px;
+    }
+  }
+}
+</style>
+>
+
+</style>
+

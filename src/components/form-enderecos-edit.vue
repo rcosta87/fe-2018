@@ -1,12 +1,11 @@
 <template>
    <formulario-wrap>
       <div class="form-wrap">
-
-       <nav-inneredit></nav-inneredit>
-        <h1 class="title-content">Endereços</h1>
+         <nav-inneredit></nav-inneredit>
+         <h1 class="title-content">Endereços</h1>
          <div class="space"></div>
          <form class="row" id="enderecos">
-            <div class="form-group row">
+            <div class="form-group row" id="enderecos-clone">
                <div class="col-xs-12">
                   <label for="tipo_end">Tipos de Endereços</label>
                   <select name="tipo_end">
@@ -20,26 +19,26 @@
                </div>
                <div class="col-xs-12">
                   <label for="data_inicial">Data inicial</label>
-                  <input type="date" name="data-inicial" value="2018-01-03">
+                  <input type="date" name="data-inicial">
                </div>
                <div class="col-xs-12">
                   <fieldset class="checkbox-field">
                      <legend>Indicador de Acurácia</legend>
                      <div class="acuracia" >
                         <span>Dia: </span>
-                        <div><input  type="radio" name="acurado" value="1" checked>Acurado<br></div>
+                        <div><input  type="radio" name="acurado" value="1">Acurado<br></div>
                         <div><input  type="radio" name="estimado" value="2">Estimado<br></div>
                         <div><input  type="radio" name="desconhecido" value="3">Desconhecido<br></div>
                      </div>
                      <div class="acuracia" >
                         <span>Mês: </span>
-                        <input  type="radio"  name="acurado" value="1" checked>Acurado<br>
+                        <input  type="radio"  name="acurado" value="1">Acurado<br>
                         <input  type="radio"  name="estimado" value="2">Estimado<br>
                         <input type="radio" name="desconhecido" value="3">Desconhecido<br>
                      </div>
                      <div class="acuracia" >
                         <span>Ano: </span>
-                        <input  type="radio"  name="acurado" value="1" checked>Acurado<br>
+                        <input  type="radio"  name="acurado" value="1">Acurado<br>
                         <input  type="radio"  name="estimado" value="2">Estimado<br>
                         <input type="radio" name="desconhecido" value="3">Desconhecido<br>
                      </div>
@@ -48,7 +47,7 @@
                <div class="space"></div>
                <div class="col-xs-12">
                   <label for="data_final">Data final</label>
-                  <input type="date" name="data_final" value="2018-02-09">
+                  <input type="date" name="data_final">
                </div>
                <div class="col-xs-12">
                   <fieldset class="checkbox-field">
@@ -62,7 +61,7 @@
                      <div class="acuracia" >
                         <span>Mês: </span>
                         <input  type="radio"  name="acurado" value="1">Acurado<br>
-                        <input  type="radio"  name="estimado" value="2" checked>Estimado<br>
+                        <input  type="radio"  name="estimado" value="2">Estimado<br>
                         <input type="radio" name="desconhecido" value="3">Desconhecido<br>
                      </div>
                      <div class="acuracia" >
@@ -74,6 +73,30 @@
                   </fieldset>
                </div>
                <div class="space"></div>
+               <div class="col-xs-12 col-md-3">
+                  <label for="caixa_postal">Caixa Postal</label>
+                  <input type="number"  name="caixa_postal">
+               </div>
+               <div class="col-xs-12 col-md-3">
+                  <label for="cep">Cep</label>
+                  <input type="number"  name="cep" placeholder="Exemplo, 74000-010.">
+               </div>
+               <div class="col-xs-12 col-md-3">
+                  <label for="bairro">Bairro</label>
+                  <input type="text"  name="bairro" >
+               </div>
+               <div class="col-xs-12 col-md-3">
+                  <label for="distrito">Distrito</label>
+                  <input type="text"  name="distrito" >
+               </div>
+               <div class="col-xs-12">
+                  <label for="end">Endereço</label>
+                  <input type="text"  name="end" >
+               </div>
+            </div>
+            <div id="end-div"></div>
+            <div class="col-xs-12 botao" @click.stop.prevent ="addInputEnd">
+               <button class="addMore">Acionar outro endereço</button>
             </div>
             <div class="form-group row">
                <div class="col-xs-12">
@@ -108,32 +131,11 @@
                   <input type="text" name="municipio">
                </div>
             </div>
-            <div class="col-xs-12 col-md-3">
-               <label for="caixa_postal">Caixa Postal</label>
-               <input type="number"  name="caixa_postal" value="150">
-            </div>
-            <div class="col-xs-12 col-md-3">
-               <label for="cep">Cep</label>
-               <input type="number"  name="cep" placeholder="Exemplo, 74000-010." value="74000010">
-            </div>
-            <div class="col-xs-12 col-md-3">
-               <label for="bairro">Bairro</label>
-               <input type="text"  name="bairro" value="Setor Bela Vista" >
-            </div>
-            <div class="col-xs-12 col-md-3">
-               <label for="distrito">Distrito</label>
-               <input type="text"  name="distrito" value="Acrelândia">
-            </div>
-            <div class="col-xs-12">
-               <label for="end">Endereço</label>
-               <input type="text"  name="end" value="Rua 150, nº 140, Setor Sul">
-            </div>
          </form>
       </div>
       <send-btn></send-btn>
-    </formulario-wrap>
+      </formulario-wrap>
 </template>
-
 <script>
 import estados from "@/assets/combo_dinamico.json";
 import paises from "@/assets/paises.json";
@@ -143,14 +145,54 @@ export default {
     return {
       estados,
       selected: estados[0].cidades,
-      nacionalidade: "brasileiro",
+      nacionalidade: "",
       paises
     };
   },
   methods: {
     currentState: function(el) {
       this.currentState = el;
+    },
+    addInputEnd: function() {
+      var id = document.getElementById("enderecos-clone");
+      var idFrame = document.getElementById("end-div");
+      var clone = id.cloneNode(true);
+      idFrame.appendChild(clone);
     }
   }
 };
 </script>
+<style lang="scss">
+.botao {
+  margin: 0 0 30px 1.3125rem;
+  width: 100%;
+  text-align: left;
+
+  button {
+    background-color: #ffc107;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 15px 30px;
+    color: white;
+    box-shadow: none;
+    border: none;
+    position: relative;
+    &:before {
+      content: "\f067";
+      font-family: "Font Awesome 5 Free";
+      font-style: normal;
+      font-weight: 900;
+      color: white;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 10px;
+      padding-right: 15px;
+    }
+  }
+}
+</style>
+>
+
+</style>
+

@@ -45,10 +45,6 @@ export default {
 $height-header: 100vh;
 $height-header-large: calc(100vh - 250px);
 
-#indentificadores {
-  position: relative;
-}
-
 .shape-wave {
   height: 250px;
   overflow: hidden;
